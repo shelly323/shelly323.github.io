@@ -10,12 +10,18 @@ function addMessage(content, sender) {
 
   const message = document.createElement('div');
   message.className = `message ${sender}`;
-  message.textContent = content;
+
+  if (sender === 'ai') {
+    message.innerHTML = marked.parse(content); // 支援 Markdown
+  } else {
+    message.textContent = content;
+  }
 
   wrapper.appendChild(message);
   chatContainer.appendChild(wrapper);
   chatContainer.scrollTop = chatContainer.scrollHeight;
 }
+
 
 function sendMessage() {
   const message = userInput.value.trim();
