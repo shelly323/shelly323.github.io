@@ -1,4 +1,4 @@
-const socket = new WebSocket('wss://9fe6-114-38-52-100.ngrok-free.app');
+const socket = new WebSocket('wss://7d6d-2001-b400-e35c-f46c-a499-a335-32e2-2011.ngrok-free.app');
 
 
 const chatContainer = document.getElementById('chat-container');
